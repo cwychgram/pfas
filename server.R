@@ -38,19 +38,6 @@ server <- function(input, output, session) {
   }, ignoreInit = TRUE)
   
   observeEvent(c(input$contaminant, input$type, input$year), {
-    # myleg <- df %>%
-    #   dplyr::select(myvar(), x, y) %>%
-    #   rename(myvar = 1) %>%
-    #   na.omit() %>%
-    #   mutate(
-    #     bins = cut(myvar, breaks = c(0, 1, 3, 5, 10, Inf)),
-    #     cols = colour_values(bins, palette = "ylorbr", na_colour = "#E1E1E1")
-    #   ) %>%
-    #   arrange(bins) %>%
-    #   summarise(bins = unique(bins),
-    #             cols = unique(cols))
-    # print(myleg)
-
     leafletProxy("map") %>%
       clearGlLayers() %>%
       clearControls() %>%
