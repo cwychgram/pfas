@@ -49,4 +49,4 @@ library(stringr)
 # 
 # write.csv(df, "data/data_tidy.csv", row.names = FALSE)
 
-df <- read.csv("data/data_tidy.csv")
+df <- fread("data/data_tidy.csv")
